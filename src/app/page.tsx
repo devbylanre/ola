@@ -1,4 +1,4 @@
-import { Container } from '@/components/Container';
+import { Tag } from '@/components/Tag';
 import Feature from '@/sections/Feature';
 import Hero from '@/sections/Hero';
 import Service from '@/sections/Service';
@@ -11,13 +11,13 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <Container as={'main'}>
+    <Tag as={'main'}>
       {/* sections */}
       <Hero />
       <Skill />
       <Service />
       <Feature />
       <Work />
-    </Container>
+    </Tag>
   );
 }
