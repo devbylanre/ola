@@ -1,5 +1,6 @@
 import React, { Fragment, ReactNode } from 'react';
 import { Header } from './components/Header';
+import Footer from './components/Footer';
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -10,6 +11,7 @@ export const BaseLayout = ({ children }: RootLayoutProps) => {
     <Fragment>
       <Header />
       {children}
+      <Footer />
     </Fragment>
   );
 };
