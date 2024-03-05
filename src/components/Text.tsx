@@ -14,22 +14,22 @@ const textVariants = cva('tracking-tight', {
       20: 'text-[1.8rem] md:text-[2rem] leading-[1.25]',
       24: 'text-[2rem] md:text-[2.4rem] leading-[1.25]',
       28: 'text-[2.4rem] md:text-[2.8rem] leading-[1.2]',
-      32: 'text-[3.2rem]',
-      40: 'text-[3.2rem] md:text-[4rem]',
-      48: 'text-[4rem] md:text-[4.8rem]',
-      56: 'text-[4rem] md:[text-[4.8rem] lg:text-[5.6rem]',
+      32: 'text-[3.2rem] leading-[1.2]',
+      40: 'text-[3.2rem] md:text-[4rem] leading-[1.2]',
+      48: 'text-[4rem] md:text-[4.8rem] leading-[1.2]',
+      56: 'text-[4rem] md:[text-[4.8rem] lg:text-[5.6rem] leading-[1.2]',
       64: 'text-[4.8rem] md:text-[4.8rem] lg:text-[6.4rem] leading-[1.1]',
       80: 'text-[4.8rem] md:text-[5.6rem] lg:text-[8rem] leading-[1.1]',
       120: 'text-[5.6rem] md:text-[8rem] lg:text-[12rem]',
     },
 
     color: {
-      'red-light': 'text-red-light',
+      'red-light': 'text-orange-100',
       'red-dark': 'text-red-dark',
-      'gray-light': 'text-gray-light',
-      'gray-dark': 'text-gray-dark',
-      'gray-light-accessible': 'text-gray-light-accessible',
-      'gray-dark-accessible': 'text-gray-dark-accessible',
+      'ash-100': 'text-ash-100',
+      'ash-200': 'text-ash-200',
+      'ash-300': 'text-ash-300',
+      'ash-400': 'text-ash-400',
     },
 
     weight: {
@@ -55,7 +55,7 @@ const textVariants = cva('tracking-tight', {
 
   defaultVariants: {
     weight: 600,
-    color: 'gray-dark',
+    color: 'ash-400',
     size: 16,
   },
 });
