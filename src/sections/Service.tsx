@@ -14,19 +14,19 @@ const services = [
     icon: IoIdCardOutline,
     title: 'Website design',
     detail:
-      'that enhances user experience for all users with or without disability.',
+      'that are user-friendly for individuals with disabilities, ensuring equal access to information and services.',
   },
   {
     icon: IoAlbumsOutline,
     title: 'Single Page Applications',
     detail:
-      'that enhances user experience for all users with or without disability.',
+      'that provide better speed, responsiveness, and user engagement, ultimately enhancing the user experience.',
   },
   {
     icon: IoCubeOutline,
     title: `API's`,
     detail:
-      'that enhances user experience for all users with or without disability.',
+      'that helps your organization secure access to data, services that drive innovation for internal partners and third-consumers.',
   },
 ];
 
@@ -34,10 +34,18 @@ const Service = () => {
   return (
     <Container
       span={'md'}
-      className='mt-80 space-y-40'
+      className='mt-80'
     >
-      <Flex gapX={32}>
-        <Text size={64}>
+      <Flex
+        gapX={1}
+        gapY={20}
+        direction={'column'}
+        className='lg:flex-row'
+      >
+        <Text
+          as={'h2'}
+          size={64}
+        >
           Fast. Amazing. Services <br />
         </Text>
 
@@ -46,10 +54,13 @@ const Service = () => {
           spaceY={20}
         >
           {services.map((service) => (
-            <Tag spaceY={4}>
+            <Tag
+              key={service.title}
+              spaceY={4}
+            >
               <Icon
                 element={service.icon}
-                size={40}
+                size={36}
               />
               <Text
                 size={20}

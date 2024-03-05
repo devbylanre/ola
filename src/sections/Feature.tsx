@@ -17,7 +17,7 @@ const Feature = () => {
     <Container
       as={'section'}
       span={'md'}
-      className='mt-80 space-y-40'
+      className='mt-80'
     >
       <Tag spaceY={16}>
         <Text
@@ -29,7 +29,7 @@ const Feature = () => {
         <Text
           size={28}
           color={'ash-300'}
-          className='lg:w-4/5'
+          className='sm:w-4/5'
         >
           Build websites that packs a lot of powerful features for protecting
           your website from attacks, high seo ranking, 24/7 connectivity, and
@@ -37,9 +37,13 @@ const Feature = () => {
         </Text>
       </Tag>
 
-      <Flex gapX={32}>
+      <Flex
+        gapX={32}
+        direction={'column'}
+        className='sm:flex-row'
+      >
         <Tag>
-          <Separator />
+          <Separator spaceY={12} />
           <Tag
             as={'ul'}
             spaceY={2}
@@ -58,7 +62,7 @@ const Feature = () => {
         </Tag>
 
         <Tag>
-          <Separator />
+          <Separator spaceY={12} />
           <Text
             size={20}
             color={'ash-300'}

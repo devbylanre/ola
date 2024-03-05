@@ -11,6 +11,7 @@ const Skill = () => {
     >
       <Tag spaceY={12}>
         <Text
+          as={'h2'}
           size={80}
           weight={600}
         >

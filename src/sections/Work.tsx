@@ -2,17 +2,20 @@ import { Container } from '@/components/Container';
 import { Text } from '@/components/Text';
 import { Grid } from '@/components/Grid';
 import { Tag } from '@/components/Tag';
+import Link from 'next/link';
 
 const works = [
   {
     brand: 'teckaa ltd.',
     industry: 'digital agency',
     image: 'teckaa.png',
+    url: 'https://teckaa.com/',
   },
   {
     brand: 'excellium',
     industry: 'software agency',
     image: 'excellium.png',
+    url: 'https://excellium.biz/',
   },
 ];
 
@@ -20,6 +23,7 @@ const Work = () => {
   return (
     <Container className='mt-80 w-full bg-zinc-100 py-40 space-y-20'>
       <Text
+        as={'h2'}
         size={64}
         align={'center'}
       >
@@ -28,15 +32,22 @@ const Work = () => {
 
       <Container span={'xl'}>
         <Grid
-          cols={2}
+          cols={1}
           gap={10}
+          className='md:grid-cols-2'
         >
           {works.map((work) => (
-            <Tag>
+            <Link
+              key={work.brand}
+              href={work.url}
+              target='_blank'
+              className='group'
+            >
               <img
                 src={`/assets/images/${work.image}`}
-                alt=''
-                className='w-full h-[440px] object-cover rounded-[1.5rem]'
+                alt={work.image + 'showcase'}
+                loading='lazy'
+                className='w-full h-[360px] lg:h-[440px] object-cover rounded-[1.5rem] group-hover:scale-95 transition-all duration-300 ease-in-out'
               />
               <Text
                 size={20}
@@ -52,7 +63,7 @@ const Work = () => {
               >
                 {work.industry}
               </Text>
-            </Tag>
+            </Link>
           ))}
         </Grid>
       </Container>
