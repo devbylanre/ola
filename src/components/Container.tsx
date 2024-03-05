@@ -2,7 +2,7 @@ import cn from '@/lib/cn';
 import { VariantProps, cva } from 'class-variance-authority';
 import { ComponentProps, ElementType } from 'react';
 
-const containerVariants = cva('mx-auto px-5 lg:px-0', {
+const containerVariants = cva('mx-auto px-3 lg:px-0', {
   variants: {
     span: {
       none: 'w-full',

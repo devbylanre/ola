@@ -57,6 +57,9 @@ const flexVariants = cva('flex', {
       12: 'gap-12',
       16: 'gap-16',
       20: 'gap-20',
+      24: 'gap-y-24',
+      28: 'gap-y-28',
+      32: 'gap-32',
     },
 
     gapX: {
@@ -73,6 +76,9 @@ const flexVariants = cva('flex', {
       12: 'gap-x-12',
       16: 'gap-x-16',
       20: 'gap-x-20',
+      24: 'gap-y-24',
+      28: 'gap-y-28',
+      32: 'gap-x-32',
     },
 
     gapY: {
@@ -89,6 +95,9 @@ const flexVariants = cva('flex', {
       12: 'gap-y-12',
       16: 'gap-y-16',
       20: 'gap-y-20',
+      24: 'gap-y-24',
+      28: 'gap-y-28',
+      32: 'gap-y-32',
     },
   },
 });

@@ -146,7 +146,17 @@ export const Grid = <TElement extends ElementType>(
   return (
     <Component
       className={cn(
-        gridVariants({ cols, rows, place, content, justify, gap, gapX, gapY })
+        gridVariants({
+          cols,
+          rows,
+          place,
+          content,
+          justify,
+          gap,
+          gapX,
+          gapY,
+          className,
+        })
       )}
       {...rest}
     />
