@@ -32,7 +32,9 @@ export const Header = () => {
                 as={'li'}
                 size={13}
                 weight={500}
+                color='ash-300'
                 transform={'capitalize'}
+                className='hover:text-ash-400'
               >
                 <Link href={`#${list}`}>{list}</Link>
               </Text>
