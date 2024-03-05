@@ -2,7 +2,7 @@ import cn from '@/lib/cn';
 import { VariantProps, cva } from 'class-variance-authority';
 import React, { ComponentProps, ElementType } from 'react';
 
-const tagVariants = cva('', {
+const tagVariants = cva('w-full', {
   variants: {
     display: {
       block: 'block',
