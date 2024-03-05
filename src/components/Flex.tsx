@@ -11,13 +11,30 @@ const flexVariants = cva('flex', {
       'column-reverse': 'flex-col-reverse',
     },
 
-    alignItems: {
+    wrap: {
+      true: 'flex-wrap',
+      false: 'flex-nowrap',
+      reverse: 'flex-wrap-reverse',
+    },
+
+    items: {
       start: 'items-start',
       end: 'items-end',
       center: 'items-center',
+      stretch: 'items-stretch',
+      baseline: 'items-baseline',
     },
 
-    justifyContent: {
+    content: {
+      start: 'content-start',
+      center: 'content-center',
+      end: 'content-end',
+      between: 'content-between',
+      around: 'content-around',
+      stretch: 'content-stretch',
+    },
+
+    justify: {
       start: 'justify-start',
       end: 'justify-end',
       center: 'justify-center',
@@ -92,11 +109,13 @@ export const Flex = <TElement extends ElementType>(
     as,
     className,
     direction,
+    wrap,
+    content,
+    items,
+    justify,
     gap,
     gapX,
     gapY,
-    alignItems,
-    justifyContent,
     ...rest
   } = props;
 
@@ -107,8 +126,10 @@ export const Flex = <TElement extends ElementType>(
       className={cn(
         flexVariants({
           direction,
-          alignItems,
-          justifyContent,
+          wrap,
+          items,
+          content,
+          justify,
           gap,
           gapX,
           gapY,
