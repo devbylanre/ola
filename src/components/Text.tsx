@@ -2,7 +2,7 @@ import cn from '@/lib/cn';
 import { VariantProps, cva } from 'class-variance-authority';
 import { ComponentProps, ElementType, ForwardedRef, forwardRef } from 'react';
 
-const textVariants = cva('tracking-normal', {
+const textVariants = cva('tracking-tight', {
   variants: {
     size: {
       10: 'text-[1rem]',
@@ -10,17 +10,17 @@ const textVariants = cva('tracking-normal', {
       13: 'text-[1.3rem]',
       14: 'text-[1.4rem]',
       16: 'text-[1.6rem]',
-      18: 'text-[1.6rem] md:text-[1.8rem]',
-      20: 'text-[1.8rem] md:text-[2rem]',
-      24: 'text-[2rem] md:text-[2.4rem]',
-      28: 'text-[2.4rem] md:text-[2.8rem]',
+      18: 'text-[1.6rem] md:text-[1.8rem] leading-[1.25]',
+      20: 'text-[1.8rem] md:text-[2rem] leading-[1.25]',
+      24: 'text-[2rem] md:text-[2.4rem] leading-[1.25]',
+      28: 'text-[2.4rem] md:text-[2.8rem] leading-[1.2]',
       32: 'text-[3.2rem]',
       40: 'text-[3.2rem] md:text-[4rem]',
       48: 'text-[4rem] md:text-[4.8rem]',
       56: 'text-[4rem] md:[text-[4.8rem] lg:text-[5.6rem]',
-      64: 'text-[4.8rem] md:text-[4.8rem] lg:text-[6.4rem]',
-      80: 'text-[4.8rem] md:text-[5.6rem] lg:text-[8rem]',
-      120: 'text-[5.6rem md:text-[8rem] lg:text-[12rem]',
+      64: 'text-[4.8rem] md:text-[4.8rem] lg:text-[6.4rem] leading-[1.1]',
+      80: 'text-[4.8rem] md:text-[5.6rem] lg:text-[8rem] leading-[1.1]',
+      120: 'text-[5.6rem] md:text-[8rem] lg:text-[12rem]',
     },
 
     color: {
@@ -45,10 +45,16 @@ const textVariants = cva('tracking-normal', {
       right: 'text-right',
       center: 'text-center',
     },
+
+    transform: {
+      uppercase: 'uppercase',
+      lowercase: 'lowercase',
+      capitalize: 'capitalize',
+    },
   },
 
   defaultVariants: {
-    weight: 500,
+    weight: 600,
     color: 'gray-dark',
     size: 16,
   },
@@ -66,13 +72,16 @@ type TextProps<TElement extends ElementType> = TextOwnProps<TElement> &
 export const Text = <TElement extends ElementType>(
   props: TextProps<TElement>
 ) => {
-  const { as, className, weight, color, size, align, ...rest } = props;
+  const { as, className, weight, color, transform, size, align, ...rest } =
+    props;
 
   const Component = as || 'p';
 
   return (
     <Component
-      className={cn(textVariants({ weight, color, size, align, className }))}
+      className={cn(
+        textVariants({ weight, color, size, align, transform, className })
+      )}
       {...rest}
     />
   );
