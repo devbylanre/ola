@@ -9,6 +9,27 @@ import {
   IoCubeOutline,
 } from 'react-icons/io5';
 
+const services = [
+  {
+    icon: IoIdCardOutline,
+    title: 'Website design',
+    detail:
+      'that enhances user experience for all users with or without disability.',
+  },
+  {
+    icon: IoAlbumsOutline,
+    title: 'Single Page Applications',
+    detail:
+      'that enhances user experience for all users with or without disability.',
+  },
+  {
+    icon: IoCubeOutline,
+    title: `API's`,
+    detail:
+      'that enhances user experience for all users with or without disability.',
+  },
+];
+
 const Service = () => {
   return (
     <Container
@@ -20,64 +41,31 @@ const Service = () => {
           Fast. Amazing. Services <br />
         </Text>
 
-        <Flex
+        <Tag
           direction={'column'}
-          gapY={32}
+          spaceY={20}
         >
-          {/* website design */}
-          <Tag spaceY={8}>
-            <Icon
-              element={IoIdCardOutline}
-              size={40}
-            />
-            <Text size={20}>
-              Website design{' '}
+          {services.map((service) => (
+            <Tag spaceY={4}>
+              <Icon
+                element={service.icon}
+                size={40}
+              />
               <Text
-                as={'span'}
                 size={20}
+                color={'ash-300'}
               >
-                websites that enhances user experience for all users with or
-                without disability.
+                <Text
+                  as={'span'}
+                  size={20}
+                >
+                  {service.title}
+                </Text>{' '}
+                {service.detail}
               </Text>
-            </Text>
-          </Tag>
-
-          {/* single page applications */}
-          <Tag spaceY={8}>
-            <Icon
-              element={IoAlbumsOutline}
-              size={40}
-            />
-            <Text size={20}>
-              Single Page Applications{' '}
-              <Text
-                as={'span'}
-                size={20}
-              >
-                websites that enhances user experience for all users with or
-                without disability.
-              </Text>
-            </Text>
-          </Tag>
-
-          {/* apis's */}
-          <Tag spaceY={8}>
-            <Icon
-              element={IoCubeOutline}
-              size={40}
-            />
-            <Text size={20}>
-              API's{' '}
-              <Text
-                as={'span'}
-                size={20}
-              >
-                websites that enhances user experience for all users with or
-                without disability.
-              </Text>
-            </Text>
-          </Tag>
-        </Flex>
+            </Tag>
+          ))}
+        </Tag>
       </Flex>
     </Container>
   );

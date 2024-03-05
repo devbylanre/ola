@@ -4,6 +4,14 @@ import { Text } from '@/components/Text';
 import { Flex } from '@/components/Flex';
 import { Separator } from '@/components/Separator';
 
+const features = [
+  'accessibility',
+  '24-hours Uptime',
+  'Security',
+  'WebMails',
+  'Seo Optimization',
+];
+
 const Feature = () => {
   return (
     <Container
@@ -12,16 +20,20 @@ const Feature = () => {
       className='mt-80 space-y-40'
     >
       <Tag spaceY={16}>
-        <Text size={80}>
+        <Text
+          as={'h2'}
+          size={80}
+        >
           All the best <br /> features.
         </Text>
         <Text
           size={28}
-          className='lg:w-3/5'
+          color={'ash-300'}
+          className='lg:w-4/5'
         >
-          Website built by me packs a lot of powerful features for protecting
-          your website from attacks, high seo ranking, all-round connectivity,
-          and professional emails.
+          Build websites that packs a lot of powerful features for protecting
+          your website from attacks, high seo ranking, 24/7 connectivity, and
+          professional emails.
         </Text>
       </Tag>
 
@@ -32,45 +44,40 @@ const Feature = () => {
             as={'ul'}
             spaceY={2}
           >
-            <Text
-              as={'li'}
-              size={28}
-            >
-              Accessibility
-            </Text>
-            <Text
-              as={'li'}
-              size={28}
-            >
-              24-hours Uptime
-            </Text>
-            <Text
-              as={'li'}
-              size={28}
-            >
-              Security
-            </Text>
-            <Text
-              as={'li'}
-              size={28}
-            >
-              WebMails
-            </Text>
-            <Text
-              as={'li'}
-              size={28}
-            >
-              Seo Optimization
-            </Text>
+            {features.map((feature) => (
+              <Text
+                key={feature}
+                as={'li'}
+                size={28}
+                transform={'capitalize'}
+              >
+                {feature}
+              </Text>
+            ))}
           </Tag>
         </Tag>
 
         <Tag>
           <Separator />
-          <Text size={20}>
-            Experience a digital experience with responsive design that offers
-            your users with seamless user experience while protecting your
-            website and users for spams and brute attacks.
+          <Text
+            size={20}
+            color={'ash-300'}
+          >
+            Experience a new digital experience with{' '}
+            <Text
+              as={'span'}
+              size={20}
+            >
+              responsive design
+            </Text>{' '}
+            that offers your users seamless experience while{' '}
+            <Text
+              as={'span'}
+              size={20}
+            >
+              protecting your website
+            </Text>{' '}
+            and users for spams and brute attacks.
           </Text>
         </Tag>
       </Flex>

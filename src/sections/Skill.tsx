@@ -23,12 +23,13 @@ const Skill = () => {
 
         <Text
           size={20}
+          color={'ash-300'}
           className='w-full sm:w-3/5'
         >
-          I love infusing innovation into my projects, creating designs that
-          tell stories and leave a lasting impression. My work is all about
-          blending creativity with timeless beauty. Let's create something
-          amazing together!
+          I'm passionate about adding fresh ideas into my projects, crafting
+          designs that narrate brand stories and make a lasting impact. I focus
+          on combining creativity with visual design. Let's collaborate and make
+          something truly remarkable!
         </Text>
       </Tag>
     </Container>

@@ -40,12 +40,14 @@ const Work = () => {
               />
               <Text
                 size={20}
+                transform={'capitalize'}
                 className='mt-8'
               >
                 {work.brand}
               </Text>
               <Text
                 size={14}
+                transform={'capitalize'}
                 className='mt-1'
               >
                 {work.industry}

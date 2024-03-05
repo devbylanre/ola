@@ -8,24 +8,36 @@ const Hero = () => {
     <Container
       as={'section'}
       span={'lg'}
+      className='mt-24 md:mt-40'
     >
       <Tag
         as={'section'}
         spaceY={16}
       >
-        <Text
-          as={'h1'}
-          size={120}
-          weight={500}
-          align={'center'}
-        >
-          Olanrewaju O.
-        </Text>
+        <Tag spaceY={2}>
+          <Text
+            as={'h1'}
+            size={32}
+            align={'center'}
+          >
+            Olanrewaju O.
+          </Text>
+
+          <Text
+            as={'h2'}
+            size={56}
+            align={'center'}
+          >
+            Pushing Pixels.
+            <br />
+            Building Brands.
+          </Text>
+        </Tag>
 
         <Text
           size={20}
           align={'center'}
-          color={'gray-dark-accessible'}
+          color={'ash-300'}
           className='w-full sm:w-3/5 mx-auto'
         >
           I'm a freelancer developer that helps brands push pixels, boundaries
@@ -35,7 +47,7 @@ const Hero = () => {
 
         <Button>Available for work</Button>
 
-        <Tag className='h-[320px] sm:h-[500px] lg:h-[600px] bg-gray-light rounded-lg'></Tag>
+        <Tag className='h-[320px] sm:h-[500px] lg:h-[600px] bg-ash-100 rounded-lg'></Tag>
       </Tag>
     </Container>
   );
