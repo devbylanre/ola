@@ -47,7 +47,7 @@ const Work = () => {
                 src={`/assets/images/${work.image}`}
                 alt={work.image + 'showcase'}
                 loading='lazy'
-                className='w-full h-[360px] lg:h-[440px] object-cover rounded-[1.5rem] group-hover:scale-95 transition-all duration-300 ease-in-out'
+                className='w-full h-[280px] lg:h-[440px] object-cover rounded-[1.5rem] group-hover:scale-95 transition-all duration-300 ease-in-out'
               />
               <Text
                 size={20}

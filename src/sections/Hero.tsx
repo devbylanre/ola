@@ -6,6 +6,7 @@ import { Button } from '@/components/Button';
 const Hero = () => {
   return (
     <Container
+      id='overview'
       as={'section'}
       span={'lg'}
       className='mt-24 md:mt-40'
@@ -47,7 +48,14 @@ const Hero = () => {
 
         <Button>Available for work</Button>
 
-        <Tag className='h-[320px] sm:h-[500px] lg:h-[600px] bg-ash-100 rounded-lg'></Tag>
+        <img
+          src='/assets/images/ola.jpg'
+          loading='lazy'
+          className='w-full object-cover h-[320px] sm:h-[500px] lg:h-[600px] bg-ash-100 rounded-lg'
+          style={{
+            objectPosition: 'left 70%',
+          }}
+        />
       </Tag>
     </Container>
   );

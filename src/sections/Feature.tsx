@@ -15,6 +15,7 @@ const features = [
 const Feature = () => {
   return (
     <Container
+      id='features'
       as={'section'}
       span={'md'}
       className='mt-80'

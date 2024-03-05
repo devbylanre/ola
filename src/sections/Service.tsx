@@ -33,6 +33,7 @@ const services = [
 const Service = () => {
   return (
     <Container
+      id={'services'}
       span={'md'}
       className='mt-80'
     >

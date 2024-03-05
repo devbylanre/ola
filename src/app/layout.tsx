@@ -1,6 +1,7 @@
 export const metadata = {
-  title: 'Ola | Website designer',
-  description: 'Ola is a software developer, website designer from Africa',
+  title: 'Ola | Building brands',
+  description:
+    'a freelancer developer that helps brands push pixels, boundaries and thrive within their respective industry. I resolve consumer challenges and explore new creative opportunities.',
 };
 import { BaseLayout } from '@/layouts/root/Index';
 import '../assets/styles/global.css';
@@ -19,7 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      className='scroll-smooth focus:scroll-auto'
+    >
+      <head>
+        <link
+          rel='icon'
+          href='/assets/images/logo/Asset 1.svg'
+        />
+      </head>
       <body className={inter.className}>
         <BaseLayout>{children}</BaseLayout>
       </body>
