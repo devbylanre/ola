@@ -15,7 +15,7 @@ import {
   IoLogoTwitter,
   IoLogoLinkedin,
   IoLogoGithub,
-  IoResizeSharp,
+  IoChevronUp,
 } from 'react-icons/io5';
 
 const socials = [
@@ -38,7 +38,7 @@ const accordions = [
     item: 'duration',
     title: 'How long does a project take?',
     content:
-      'The duration depends on the project scope and complexity of the project. I offer estimated time-frames during our initial discussion and strive to adhere to mutually agreed-upon deadlines while maintaining high quality. For instance, a straightforward informational website with only a few static pages and minimal customization might require approximately 2-4 weeks for development.',
+      'The duration depends on the project scope and complexity of the project. I offer estimated time-frames during our initial discussion and strive to adhere to mutually agreed-upon deadlines while maintaining high quality. For instance, a business website with only a few static pages and minimal customization might require approximately 2-4 weeks for development.',
   },
   {
     item: 'services',
@@ -50,7 +50,7 @@ const accordions = [
     item: 'pricing',
     title: 'What is your pricing structure?',
     content:
-      'The pricing structure is flexible and adaptable, tailored to suit the unique characteristics and intricacies of each individual project. Determining the cost involves a comprehensive assessment of factors such as the breadth and depth of project requirements, the anticipated timeline for completion, and the level of intricacy and detail demanded by the task at hand.',
+      'The pricing structure is flexible and adaptable, tailored to suit the unique characteristics and complexity of each individual project. Determining the cost involves a comprehensive assessment of factors such as the breadth and depth of project requirements, the anticipated timeline for completion, and the complexity and detail demanded by the task at hand.',
   },
 ];
 
@@ -80,10 +80,7 @@ const Footer = () => {
         </Button>
       </Flex>
 
-      <Tag
-        span={'sm'}
-        spaceY={12}
-      >
+      <Tag>
         <Text
           as={'h3'}
           size={56}
@@ -92,16 +89,13 @@ const Footer = () => {
           Looking for answers?
         </Text>
         {/* accordions */}
-        <Accordion className='basis-full'>
-          {accordions.map((accordion) => (
-            <AccordionItem
-              key={accordion.item}
-              className='border-b py-8 space-y-8'
-            >
-              <AccordionTrigger item={accordion.item}>
-                <Flex
-                  items={'center'}
-                  justify={'between'}
+        <Tag className='mt-12 lg:mt-20'>
+          <Accordion>
+            {accordions.map((accordion) => (
+              <AccordionItem key={accordion.item}>
+                <AccordionTrigger
+                  item={accordion.item}
+                  className='flex justify-between items-center py-6 border-b border-slate-200'
                 >
                   <Text
                     as={'h4'}
@@ -111,25 +105,26 @@ const Footer = () => {
                   </Text>
 
                   <Icon
-                    element={IoResizeSharp}
+                    element={IoChevronUp}
                     size={20}
                   />
-                </Flex>
-              </AccordionTrigger>
-              <AccordionContent
-                item={accordion.item}
-                className='mb-8'
-              >
-                <Text
-                  size={18}
-                  color={'ash-300'}
+                </AccordionTrigger>
+                <AccordionContent
+                  item={accordion.item}
+                  className='py-6'
                 >
-                  {accordion.content}
-                </Text>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+                  <Text
+                    size={18}
+                    weight={500}
+                    color={'ash-300'}
+                  >
+                    {accordion.content}
+                  </Text>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Tag>
       </Tag>
 
       <Tag
