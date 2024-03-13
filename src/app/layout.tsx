@@ -1,13 +1,13 @@
 export const metadata = {
-  title: 'Ola | Building brands',
+  title: 'Ola - Design build and ship websites',
   description:
-    'a freelancer developer that helps brands push pixels, boundaries and thrive within their respective industry. I resolve consumer challenges and explore new creative opportunities.',
+    'Ola is a freelancer developer that helps brands push pixels, boundaries and thrive within their respective industry. I resolve digital challenges and explore new creative opportunities.',
 };
 import { BaseLayout } from '@/layouts/root/Index';
 import '../assets/styles/global.css';
 import { Inter } from 'next/font/google';
 
-const inter = Inter({
+const Typo = Inter({
   weight: 'variable',
   style: ['normal'],
   subsets: ['latin'],
@@ -30,7 +30,7 @@ export default function RootLayout({
           href='/assets/images/logo/Asset 1.svg'
         />
       </head>
-      <body className={inter.className}>
+      <body className={Typo.className}>
         <BaseLayout>{children}</BaseLayout>
       </body>
     </html>
