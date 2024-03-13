@@ -20,6 +20,7 @@ type AccordionProviderProps = {
 
 const accordionContext = createContext<AccordionContext | null>(null);
 
+// context provider
 export const AccordionProvider = ({
   children,
   opened,
