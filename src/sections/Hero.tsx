@@ -37,12 +37,13 @@ const Hero = () => {
 
         <Text
           size={20}
+          weight={500}
           align={'center'}
           color={'ash-300'}
           className='w-full sm:w-3/5 mx-auto'
         >
           I'm a freelancer developer that helps brands push pixels, boundaries
-          and thrive within their respective industry. I resolve consumer
+          and thrive within their respective industry. I resolve digital
           challenges and explore new creative opportunities.
         </Text>
 
