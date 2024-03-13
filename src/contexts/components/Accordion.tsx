@@ -24,7 +24,7 @@ export const AccordionProvider = ({
   children,
   opened,
 }: AccordionProviderProps) => {
-  const [accordions, setAccordions] = useState<string[]>([''] || [opened]);
+  const [accordions, setAccordions] = useState<string[]>([opened || '']);
 
   return (
     <accordionContext.Provider
