@@ -3,6 +3,7 @@ import { Flex } from '@/components/Flex';
 import { Grid } from '@/components/Grid';
 import { Tag } from '@/components/Tag';
 import { Text } from '@/components/Text';
+import Image from 'next/image';
 
 const bentos = [
   {
@@ -51,10 +52,10 @@ const Skill = () => {
           color={'ash-300'}
           className='w-full sm:w-4/6'
         >
-          I'm passionate about adding fresh ideas into my projects, crafting
+          I am passionate about adding fresh ideas into my projects, crafting
           designs that narrate brand stories and make a lasting impact. I focus
           on combining creativity, accessibility, clean code with visual design.
-          Let's collaborate and make something truly remarkable!
+          Let us collaborate and make something truly remarkable!
         </Text>
       </Tag>
 
@@ -71,7 +72,9 @@ const Skill = () => {
             direction={'column'}
             className='bg-slate-100 rounded-2xl p-5 overflow-hidden'
           >
-            <img
+            <Image
+              width={500}
+              height={500}
               src={`/assets/images/${bento.image}`}
               alt='code'
               className='w-full h-[304px] object-cover object-left-top'

@@ -1,8 +1,8 @@
 import { Container } from '@/components/Container';
 import { Text } from '@/components/Text';
 import { Grid } from '@/components/Grid';
-import { Tag } from '@/components/Tag';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const works = [
   {
@@ -43,7 +43,9 @@ const Work = () => {
               target='_blank'
               className='group'
             >
-              <img
+              <Image
+                width={900}
+                height={900}
                 src={`/assets/images/${work.image}`}
                 alt={work.image + 'showcase'}
                 loading='lazy'

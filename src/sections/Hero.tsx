@@ -3,6 +3,7 @@ import { Tag } from '@/components/Tag';
 import { Text } from '@/components/Text';
 import { Button } from '@/components/Button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -43,7 +44,7 @@ const Hero = () => {
           color={'ash-300'}
           className='w-full sm:w-3/5 mx-auto'
         >
-          I'm a freelancer developer that helps brands push pixels, boundaries
+          I am a freelancer developer that helps brands push pixels, boundaries
           and thrive within their respective industry. I resolve digital
           challenges and explore new creative opportunities.
         </Text>
@@ -57,8 +58,11 @@ const Hero = () => {
           </Link>
         </Button>
 
-        <img
+        <Image
+          width={900}
+          height={900}
           src='/assets/images/ola.jpg'
+          alt='ola at work'
           loading='lazy'
           className='w-full object-cover h-[320px] sm:h-[500px] lg:h-[600px] bg-ash-100 rounded-lg'
           style={{
