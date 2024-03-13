@@ -2,6 +2,7 @@ import { Container } from '@/components/Container';
 import { Tag } from '@/components/Tag';
 import { Text } from '@/components/Text';
 import { Button } from '@/components/Button';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -47,7 +48,14 @@ const Hero = () => {
           challenges and explore new creative opportunities.
         </Text>
 
-        <Button>Available for work</Button>
+        <Button>
+          <Link
+            href={'https://twitter.com/devbylanre'}
+            target='_blank'
+          >
+            Available for work
+          </Link>
+        </Button>
 
         <img
           src='/assets/images/ola.jpg'
