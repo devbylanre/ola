@@ -3,7 +3,7 @@
 import {
   AccordionProvider,
   useAccordion,
-} from '@/contexts/components/Accordion';
+} from '@/contexts/components/accordion';
 import React, { HTMLAttributes, ReactNode, useContext } from 'react';
 import { twMerge } from 'tailwind-merge';
 
