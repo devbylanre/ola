@@ -4,23 +4,36 @@ import {
   AccordionProvider,
   useAccordion,
 } from '@/contexts/components/Accordion';
-import React, { HTMLAttributes, useContext } from 'react';
+import React, { HTMLAttributes, ReactNode, useContext } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-type AccordionProps = HTMLAttributes<HTMLDivElement> & { opened?: string };
+type AccordionProps = { opened?: string; children: ReactNode };
 
 export const Accordion = (props: AccordionProps) => {
-  const { opened, className, ...rest } = props;
+  const { opened, children } = props;
 
-  return (
-    <AccordionProvider opened={opened}>
-      <div
-        className={twMerge('checked:w-full', className)}
-        {...rest}
-      />
-    </AccordionProvider>
-  );
+  return <AccordionProvider opened={opened}>{children}</AccordionProvider>;
 };
+
+// type AccordionListProps = Omit<HTMLAttributes<HTMLDivElement>, 'children'> & {
+//   children: (isActive: (item: string) => boolean) => ReactNode | ReactNode;
+// };
+
+// export const AccordionList = (props: AccordionListProps) => {
+//   const { className, children, ...rest } = props;
+//   const { accordions } = useAccordion();
+
+//   const isActive = (item: string) => accordions.includes(item);
+
+//   return (
+//     <div
+//       className={twMerge('w-full block', className)}
+//       {...rest}
+//     >
+//       {typeof children === 'function' ? children(isActive) : children}
+//     </div>
+//   );
+// };
 
 type AccordionItemProps = HTMLAttributes<HTMLDivElement>;
 
