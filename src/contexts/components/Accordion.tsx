@@ -13,6 +13,7 @@ type AccordionContext = {
   setAccordions: Dispatch<SetStateAction<string[]>>;
 };
 
+// props
 type AccordionProviderProps = {
   opened?: string;
   children: ReactNode;
